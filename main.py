@@ -39,6 +39,8 @@ while True:
         response = session.get(url, headers=headers, timeout=10)
         response.raise_for_status()
 
+        logging.info(f"Response: {response.text}")
+
         counter += 1
 
         if initial_state is None:
